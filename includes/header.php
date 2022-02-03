@@ -91,7 +91,7 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a class="navbar-logo" href="#"> <img src="assets/img/logo/logo-black.png" alt="logo" /> </a>
+                                <a class="navbar-logo" href="/courier"> <img src="assets/img/logo/logo-black.png" alt="logo" /> </a>
                             </div>
                             <div class="col-md-10 col-sm-10 fs-12">
                                 <div id="navbar" class="collapse navbar-collapse no-pad">
@@ -99,8 +99,8 @@
                                         <li class="dropdown active">
                                             <a href="/courier">Home </a>
                                         </li>
-                                        <li> <a href="about-us.html">About</a> </li>
-                                        <li> <a href="tracking.html"> Tracking </a> </li>
+                                        <li> <a href="/courier/about.php"> About </a> </li>
+                                        <li> <a href="/courier/tracking.php"> Tracking </a> </li>
                                         <li> <a href="/courier/services.php"> Services </a> </li>
                                         <li> <a href="/courier/contact.php"> Contact </a> </li>      
                                         <li>
