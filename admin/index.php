@@ -4,11 +4,11 @@ include('../config/app.php');
 
 if(!defined ($_SESSION['authenticated'])){
     $_SESSION['authenticated'] == false;
+}
+if($_SESSION['authenticated'] == false){
     redirect('','login.php');
 }
-
 include('../config/authentication.php');
-$auth->logout();
 
 
 ?>

@@ -1,14 +1,14 @@
 <?php
 
-include_once('/xampp/htdocs/courier/classes/registerController.php');
-include_once('/xampp/htdocs/courier/classes/loginController.php');
+include_once($_SERVER["DOCUMENT_ROOT"].'/courier/classes/loginController.php');
+include_once($_SERVER["DOCUMENT_ROOT"].'/courier/classes/registerController.php');
 
 $auth = new LoginController;
 
 if( isset($_POST['logout_btn']) ){
     $checkedlogout = $auth->logout();
     if($checkedlogout){
-        redirect("Logout successfully", "courier/login.php");
+        redirect("Logout successfully", "login.php");
     }
 }
 
