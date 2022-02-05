@@ -2,24 +2,6 @@
 
 include_once($_SERVER["DOCUMENT_ROOT"].'/courier/classes/loginController.php');
 include_once($_SERVER["DOCUMENT_ROOT"].'/courier/classes/registerController.php');
-include_once($_SERVER["DOCUMENT_ROOT"].'/courier/classes/logoController.php');
-
-
-if (isset($_POST['upload'])) {
-
-    $filename = $_FILES["uploadfile"]["name"];
-    $tempname = $_FILES["uploadfile"]["tmp_name"];    
-    $folder = "./uploads/".$filename;
-            
-    $uploads = new LogoController();
-    $checkedUpload = $uploads->upload($filename);
-    if( $checkedUpload ){
-        move_uploaded_file($tempname, $folder);
-    }
-    else{
-        echo "Failed to upload image";
-    }
-}
 
 
 $auth = new LoginController;
