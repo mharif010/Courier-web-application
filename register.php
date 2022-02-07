@@ -1,12 +1,32 @@
-<?php 
+<?php
 // include('config/session.php');
+
+
+
 
 // if($_SESSION['authenticated'] == true){
 //     redirect('','admin/index.php');
 // }
+
+
+// if (
+//   isset($_SESSION['authenticated']) === TRUE
+// ) {
+//   redirect("You are logged in", "admin/index.php");
+// } else {
+//   return false;
+// }
+
+//include('handler/registerHandler.php');
+//include('config/authentication.php');
+// $auth->isLoggedIn();
+
+
 include('config/app.php');
 include('config/authentication.php');
 $auth->isLoggedIn();
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +56,7 @@ $auth->isLoggedIn();
         <div class="row w-100 mx-0">
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
-                <?php include('message.php'); ?>
+              <?php include('message.php'); ?>
               <div class="brand-logo">
                 <img src="admin/images/logo-dark.svg" alt="logo">
               </div>

@@ -1,34 +1,32 @@
 <?php
 
-include_once($_SERVER["DOCUMENT_ROOT"].'/courier/classes/loginController.php');
-include_once($_SERVER["DOCUMENT_ROOT"].'/courier/classes/registerController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/classes/loginController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/classes/registerController.php');
 
 
 $auth = new LoginController;
 
-if( isset($_POST['logout_btn']) ){
+if (isset($_POST['logout_btn'])) {
     $checkedlogout = $auth->logout();
-    if($checkedlogout){
+    if ($checkedlogout) {
         redirect("Logout successfully", "login.php");
     }
 }
 
-if( isset($_POST['login_btn']) ){
+if (isset($_POST['login_btn'])) {
 
     $email = validateInput($db->conn, $_POST['email']);
     $pass = validateInput($db->conn, $_POST['pass']);
-    
-    $checkLogin = $auth->userLogin($email,$pass);
-    if($checkLogin){
-        redirect("Logged in successfully","admin/index.php");
-    }
-    else{
+
+    $checkLogin = $auth->userLogin($email, $pass);
+    if ($checkLogin) {
+        redirect("Logged in successfully", "admin/index.php");
+    } else {
         redirect("Invalid Email or pass", "login.php");
     }
-
 }
 
-if( isset($_POST['register_btn']) ){
+if (isset($_POST['register_btn'])) {
 
     $username = validateInput($db->conn, $_POST['username']);
     $email = validateInput($db->conn, $_POST['email']);
@@ -37,23 +35,19 @@ if( isset($_POST['register_btn']) ){
 
     $register = new RegisterController;
     $result_pass = $register->confirmPass($pass, $rePass);
-    if($result_pass){
+    if ($result_pass) {
         $result_user = $register->isUserExists($email);
-        if($result_user){
+        if ($result_user) {
             redirect("Already user email exist", "register.php");
-        }
-        else{
-            $register_query = $register->registration($username,$email,$pass);
-            if($register_query){
+        } else {
+            $register_query = $register->registration($username, $email, $pass);
+            if ($register_query) {
                 redirect("Registration succesfully", "login.php");
-            }
-            else{
+            } else {
                 redirect("Something went wrong", "register.php");
             }
         }
-    }
-    else{
+    } else {
         redirect("Password does not match", "register.php");
     }
-
 }

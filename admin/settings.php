@@ -1,12 +1,12 @@
-<?php 
+<?php
 include('../config/session.php');
 include('../config/app.php');
 
-if(!defined ($_SESSION['authenticated'])){
-    $_SESSION['authenticated'] == false;
+if (!defined($_SESSION['authenticated'])) {
+  $_SESSION['authenticated'] == false;
 }
-if($_SESSION['authenticated'] == false){
-    redirect('','login.php');
+if ($_SESSION['authenticated'] == false) {
+  redirect('', 'login.php');
 }
 include('../config/authentication.php');
 
@@ -17,7 +17,7 @@ include('./handler/settingHandler.php');
 <html lang="en">
 
 <head>
-  <!-- Required meta tags --> 
+  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Courier Admin panel</title>
@@ -27,7 +27,7 @@ include('./handler/settingHandler.php');
   <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
   <!-- endinject -->
   <!-- plugin css for this page -->
-  <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css"/>
+  <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css" />
   <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="vendors/jquery-bar-rating/fontawesome-stars-o.css">
   <link rel="stylesheet" href="vendors/jquery-bar-rating/fontawesome-stars.css">
@@ -37,6 +37,7 @@ include('./handler/settingHandler.php');
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
+
 <body>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
@@ -45,7 +46,9 @@ include('./handler/settingHandler.php');
         <a class="navbar-brand brand-logo" href="index.html">
           <h2>CMS</h2>
         </a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><h2>C</h2></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html">
+          <h2>C</h2>
+        </a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -65,12 +68,12 @@ include('./handler/settingHandler.php');
         </ul>
         <ul class="navbar-nav navbar-nav-right">
 
-            <li class="nav-item dropdown d-lg-flex d-none">
-              <form action="" method="post">
-                <button type="submit" name="logout_btn" class="btn btn-info font-weight-bold">Logout</button>
-              </form>
-            </li>
-          
+          <li class="nav-item dropdown d-lg-flex d-none">
+            <form action="" method="post">
+              <button type="submit" name="logout_btn" class="btn btn-info font-weight-bold">Logout</button>
+            </form>
+          </li>
+
           <li class="nav-item dropdown mr-4 d-lg-flex d-none">
             <a class="nav-link count-indicatord-flex align-item s-center justify-content-center" href="#">
               <i class="icon-grid"></i>
@@ -91,10 +94,10 @@ include('./handler/settingHandler.php');
             <img src="images/faces/face28.png">
           </div>
           <div class="user-name">
-              Edward Spencer
+            Edward Spencer
           </div>
           <div class="user-designation">
-              Developer
+            Developer
           </div>
         </div>
         <ul class="nav">
@@ -117,8 +120,8 @@ include('./handler/settingHandler.php');
               </ul>
             </div>
           </li>
-          
-         
+
+
         </ul>
       </nav>
       <!-- partial -->
@@ -129,36 +132,36 @@ include('./handler/settingHandler.php');
           <div class="row">
             <div class="col-sm-6 mb-4 mb-xl-0">
 
-                <form action="" method="POST" class="forms-sample" enctype="multipart/form-data">
-                    <div class="form-group row">
-                      <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Change Title</label>
-                      <div class="col-sm-9">
-                            <input type="text" name="title" class="form-control" placeholder="Site title" value="">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Change Tagline</label>
-                      <div class="col-sm-9">
-                            <input type="text" name="tagline" class="form-control" placeholder="Site Tagline" value="">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="exampleInputMobile" class="col-sm-3 col-form-label">Change Logo</label>
-                      <div class="col-sm-9">
-                        <input type="file" name="uploadfile" class="form-control file-upload-info" placeholder="Upload Image">
-                      </div>
-                    </div>
-                    
-                    <button type="submit" name="website_settings" class="btn btn-primary btn-rounded btn-fw">Save Changes</button>
-                    
-                  </form>
+              <form action="" method="POST" class="forms-sample" enctype="multipart/form-data">
+                <div class="form-group row">
+                  <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Change Title</label>
+                  <div class="col-sm-9">
+                    <input type="text" name="title" class="form-control" placeholder="Site title" value="<?php echo $showTitle; ?>">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Change Tagline</label>
+                  <div class="col-sm-9">
+                    <input type="text" name="tagline" class="form-control" placeholder="Site Tagline" value="">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="exampleInputMobile" class="col-sm-3 col-form-label">Change Logo</label>
+                  <div class="col-sm-9">
+                    <input type="file" value="1.jpg" name="uploadfile" class="form-control file-upload-info" placeholder="Upload Image">
+                  </div>
+                </div>
+
+                <button type="submit" name="website_settings" class="btn btn-primary btn-rounded btn-fw">Save Changes</button>
+
+              </form>
 
 
             </div>
-            
+
           </div>
 
-          
+
         </div>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
@@ -167,9 +170,9 @@ include('./handler/settingHandler.php');
             <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
             <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard templates</a> from Bootstrapdash.com</span>
           </div>
-          <span class="text-muted d-block text-center text-sm-left d-sm-inline-block mt-2">Distributed By: <a href="https://www.themewagon.com/" target="_blank">ThemeWagon</a></span> 
+          <span class="text-muted d-block text-center text-sm-left d-sm-inline-block mt-2">Distributed By: <a href="https://www.themewagon.com/" target="_blank">ThemeWagon</a></span>
         </footer>
-        
+
         <!-- partial -->
       </div>
       <!-- main-panel ends -->
@@ -198,4 +201,3 @@ include('./handler/settingHandler.php');
 </body>
 
 </html>
-

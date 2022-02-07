@@ -1,14 +1,4 @@
-<?php 
-// include('config/session.php');
-
-// if(!defined ($_SESSION['authenticated'])){
-//     $_SESSION['authenticated'] == false;
-// }
-
-// if($_SESSION['authenticated'] == true){
-//     redirect('','admin/index.php');
-// }
-
+<?php
 include('config/app.php');
 include('config/authentication.php');
 $auth->isLoggedIn();

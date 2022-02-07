@@ -1,12 +1,12 @@
-<?php 
+<?php
 include('../config/session.php');
 include('../config/app.php');
 
-if(!defined ($_SESSION['authenticated'])){
-    $_SESSION['authenticated'] == false;
+if (!defined($_SESSION['authenticated'])) {
+  $_SESSION['authenticated'] == false;
 }
-if($_SESSION['authenticated'] == false){
-    redirect('','login.php');
+if ($_SESSION['authenticated'] == false) {
+  redirect('', 'login.php');
 }
 include('../config/authentication.php');
 ?>
@@ -15,7 +15,7 @@ include('../config/authentication.php');
 <html lang="en">
 
 <head>
-  <!-- Required meta tags --> 
+  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Courier Admin panel</title>
@@ -25,7 +25,7 @@ include('../config/authentication.php');
   <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
   <!-- endinject -->
   <!-- plugin css for this page -->
-  <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css"/>
+  <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css" />
   <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="vendors/jquery-bar-rating/fontawesome-stars-o.css">
   <link rel="stylesheet" href="vendors/jquery-bar-rating/fontawesome-stars.css">
@@ -35,6 +35,7 @@ include('../config/authentication.php');
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
+
 <body>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
@@ -43,7 +44,9 @@ include('../config/authentication.php');
         <a class="navbar-brand brand-logo" href="index.html">
           <h2>CMS</h2>
         </a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><h2>C</h2></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html">
+          <h2>C</h2>
+        </a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -63,12 +66,12 @@ include('../config/authentication.php');
         </ul>
         <ul class="navbar-nav navbar-nav-right">
 
-            <li class="nav-item dropdown d-lg-flex d-none">
-              <form action="" method="post">
-                <button type="submit" name="logout_btn" class="btn btn-info font-weight-bold">Logout</button>
-              </form>
-            </li>
-          
+          <li class="nav-item dropdown d-lg-flex d-none">
+            <form action="" method="post">
+              <button type="submit" name="logout_btn" class="btn btn-info font-weight-bold">Logout</button>
+            </form>
+          </li>
+
           <li class="nav-item dropdown mr-4 d-lg-flex d-none">
             <a class="nav-link count-indicatord-flex align-item s-center justify-content-center" href="#">
               <i class="icon-grid"></i>
@@ -89,10 +92,10 @@ include('../config/authentication.php');
             <img src="images/faces/face28.png">
           </div>
           <div class="user-name">
-              Edward Spencer
+            Edward Spencer
           </div>
           <div class="user-designation">
-              Developer
+            Developer
           </div>
         </div>
         <ul class="nav">
@@ -115,8 +118,8 @@ include('../config/authentication.php');
               </ul>
             </div>
           </li>
-          
-         
+
+
         </ul>
       </nav>
       <!-- partial -->
@@ -127,13 +130,13 @@ include('../config/authentication.php');
           <div class="row">
             <div class="col-sm-6 mb-4 mb-xl-0">
               <h4 class="font-weight-bold text-dark">Site Dashboard from here.</h4>
-              
-             
-              
+
+
+
             </div>
           </div>
 
-          
+
         </div>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
@@ -142,9 +145,9 @@ include('../config/authentication.php');
             <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
             <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard templates</a> from Bootstrapdash.com</span>
           </div>
-          <span class="text-muted d-block text-center text-sm-left d-sm-inline-block mt-2">Distributed By: <a href="https://www.themewagon.com/" target="_blank">ThemeWagon</a></span> 
+          <span class="text-muted d-block text-center text-sm-left d-sm-inline-block mt-2">Distributed By: <a href="https://www.themewagon.com/" target="_blank">ThemeWagon</a></span>
         </footer>
-        
+
         <!-- partial -->
       </div>
       <!-- main-panel ends -->
@@ -173,4 +176,3 @@ include('../config/authentication.php');
 </body>
 
 </html>
-

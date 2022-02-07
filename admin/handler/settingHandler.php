@@ -2,6 +2,16 @@
 
 include('controller/settingController.php');
 
+$updateSetting = new SettingController();
+
+$settile = $updateSetting->getTitle();
+
+foreach($settile as $title){
+    $showTitle = $title['website_title'];
+}
+
+
+
 if (isset($_POST['website_settings'])) {
 
     $title = $_POST['title'];
@@ -9,13 +19,24 @@ if (isset($_POST['website_settings'])) {
     $filename = $_FILES["uploadfile"]["name"];
     $tempname = $_FILES["uploadfile"]["tmp_name"];    
     $folder = "uploads/".$filename;
-            
-    $uploads = new LogoController();
-    $checkedUpload = $uploads->upload( $title,$tagline,$filename );
+
+    if(!empty ($filename)){
+        $checkedUpload = $updateSetting->upload( $filename );
     if( $checkedUpload ){
         move_uploaded_file($tempname, $folder);
     }
     else{
         echo "Failed to upload image";
     }
+    }
+
+    if(!empty($title)){
+        $updateSetting->settitle($title);
+    }
+
+    if(!empty($tagline)){
+        $updateSetting->setTagline($tagline);
+    }
+
+    
 }
