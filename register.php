@@ -1,31 +1,7 @@
 <?php
-// include('config/session.php');
-
-
-
-
-// if($_SESSION['authenticated'] == true){
-//     redirect('','admin/index.php');
-// }
-
-
-// if (
-//   isset($_SESSION['authenticated']) === TRUE
-// ) {
-//   redirect("You are logged in", "admin/index.php");
-// } else {
-//   return false;
-// }
-
-//include('handler/registerHandler.php');
-//include('config/authentication.php');
-// $auth->isLoggedIn();
-
-
 include('config/app.php');
 include('config/authentication.php');
 $auth->isLoggedIn();
-
 
 ?>
 <!DOCTYPE html>

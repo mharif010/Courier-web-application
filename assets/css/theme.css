@@ -70,54 +70,65 @@
     1 - GENERAL CSS STARTS 
 ********************************/
 
-.pricing-condition{
+.pricing-condition {
     margin-left: 23%;
     color: #000;
 }
-.pricing-condition p{
+
+.pricing-condition p {
     margin: 0;
 }
+
 .pricing-condition p i {
     margin-right: 5px;
     color: red;
 }
-.footer-about p{
+
+.footer-about p {
     margin: 0;
 }
-.footer-about p i{
+
+.footer-about p i {
     margin-right: 5px;
     color: #13ccfd;
     font-size: 15px;
 }
-.own-bgGradient{
+
+.own-bgGradient {
     background-image: linear-gradient(to right, #739b76 0%, #ffda00 51%, #5b8760 100%);
     border-radius: 5px;
     padding: 15px;
     text-align: center;
 }
+
 .feature-item.image {
     max-width: 250px;
     cursor: pointer;
     margin: auto;
 }
-.apps-box{
+
+.apps-box {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
 }
-.apps-box .icon i{
+
+.apps-box .icon i {
     font-size: 50px;
     color: #6376fe;
 }
+
 .flex {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .app-btn.blu {
     background-color: #101010;
     transition: background-color 0.25s linear;
 }
+
 .app-btn {
     width: 45%;
     max-width: 160px;
@@ -131,12 +142,14 @@
     font-size: 10px;
     text-transform: uppercase;
 }
+
 .app-btn i {
     width: 20%;
     text-align: center;
     font-size: 28px;
     margin-right: 7px;
 }
+
 .app-btn p {
     font-size: 14px;
     margin-bottom: 0;
@@ -372,6 +385,30 @@
     height: 5px;
     left: 0px;
     top: 10px;
+}
+
+/*--------------*/
+.underline {
+    text-decoration: none;
+    position: relative;
+}
+
+.underline:after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    bottom: -8px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 100px;
+    background: #272727;
+
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
 }
 
 

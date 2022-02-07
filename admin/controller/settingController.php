@@ -1,41 +1,68 @@
 <?php
-class SettingController{
+class SettingController
+{
 
-    public function __construct(){
+    public function __construct()
+    {
         $db = new dbConnection;
         $this->conn = $db->conn;
     }
 
-    public function upload($filename){
+    public function upload($filename)
+    {
         $query = "UPDATE `website_settings` SET `website_logo`= '$filename' WHERE 1";
         //$upload_query = "INSERT INTO website_settings (website_logo) VALUES ('$filename')";
         $result = $this->conn->query($query);
         return $result;
     }
 
-    public function getTitle(){
-        $query = "SELECT `website_title` FROM `website_settings` WHERE 1;";
+    public function getlogo()
+    {
+        $query = "SELECT `website_logo` FROM `website_settings` WHERE 1;";
         $result = $this->conn->query($query);
 
-        if($result->num_rows > 0){
-            return $result; 
-        }else{
+        if ($result->num_rows > 0) {
+            return $result;
+        } else {
             return false;
         }
     }
 
-    public function settitle($filename){
+    public function getTitle()
+    {
+        $query = "SELECT `website_title` FROM `website_settings` WHERE 1;";
+        $result = $this->conn->query($query);
+
+        if ($result->num_rows > 0) {
+            return $result;
+        } else {
+            return false;
+        }
+    }
+
+    public function settitle($filename)
+    {
         $query = "UPDATE `website_settings` SET `website_title`= '$filename' WHERE 1";
         $result = $this->conn->query($query);
         return $result;
     }
 
-    
+    public function getTagline()
+    {
+        $query = "SELECT `website_tagline` FROM `website_settings` WHERE 1;";
+        $result = $this->conn->query($query);
 
-    public function setTagline($filename){
+        if ($result->num_rows > 0) {
+            return $result;
+        } else {
+            return false;
+        }
+    }
+
+    public function setTagline($filename)
+    {
         $query = "UPDATE `website_settings` SET `website_tagline`= '$filename' WHERE 1";
         $result = $this->conn->query($query);
         return $result;
     }
 }
-

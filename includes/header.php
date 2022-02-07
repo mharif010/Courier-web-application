@@ -1,14 +1,6 @@
 <?php
 include('config/app.php');
-include('./classes/websiteController.php');
-
-$website = new websiteController();
-
-$logo = $website->logo();
-foreach ($logo as $lgo) {
-    $showlogo = $lgo['website_logo'];
-}
-
+include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/handler/settingHandler.php');
 
 ?>
 
@@ -16,10 +8,13 @@ foreach ($logo as $lgo) {
 <html>
 
 <head>
-    <title>GO Home-1</title>
+    <title>
+        <?php echo $showTitle; ?>
+    </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- endinject -->
+    <link rel="shortcut icon" href="./admin/uploads/<?php echo $showlogo; ?>" />
     <!-- Bootstrap Css -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <!-- Bootstrap Select Css -->
