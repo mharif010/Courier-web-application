@@ -1,6 +1,7 @@
 <?php
 include('config/app.php');
 include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/handler/settingHandler.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/handler/topbarHandler.php');
 
 ?>
 
@@ -72,7 +73,7 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/handler/settingHandler.
         <header class="header-main">
 
             <!-- Header Topbar -->
-            <div class="top-bar font2-title1 white-clr">
+            <div class="top-bar font2-title1 white-clr" style="background-image: url('./admin/uploads/<?php echo $showTopBg; ?>');">
                 <div class="theme-container container">
                     <div class="row">
                         <div class="col-md-6 col-sm-5">
@@ -83,7 +84,7 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/handler/settingHandler.
                             </ul>
                         </div>
                         <div class="col-md-6 col-sm-7 fs-12">
-                            <p class="contact-num"> <i class="fa fa-phone"></i> Call us now: <span class="theme-clr"> +880-1756-390-370 </span> </p>
+                            <p class="contact-num"> <i class="fa fa-phone"></i> Call us now: <span class="theme-clr"> <?php echo $showPhone; ?> </span> </p>
                         </div>
                     </div>
                 </div>

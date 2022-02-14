@@ -8,12 +8,13 @@ include('handler/topbarHandler.php');
 
     <div class="row">
         <div class="col-sm-6 mb-4 mb-xl-0">
+        <h4 class="font-weight-bold text-dark">Site Topbar from here.</h4><br>
 
             <form action="" method="post" class="forms-sample" enctype="multipart/form-data">
                 <div class="form-group row">
                     <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Change Call Number</label>
                     <div class="col-sm-9">
-                        <input type="text" name="topbar_phone" class="form-control" placeholder="Phone number" value="">
+                        <input type="text" name="topbar_phone" class="form-control" placeholder="Phone number" value="<?php echo $showPhone; ?>">
                     </div>
                 </div>
                 <div class="form-group row">

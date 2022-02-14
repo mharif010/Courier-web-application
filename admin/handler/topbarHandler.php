@@ -3,15 +3,12 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/topbarContro
 
 $topbarSetting = new topbarController;
 
-//$setphone = $topbarSetting->getPhone();
-//$settopbg = $topbarSetting->getTopbg();
+$settopbar = $topbarSetting->getTopbar();
 
-// foreach ($setphone as $phone) {
-//     $showPhone = $phone['site_phone'];
-// }
-// foreach ($settopbg as $topBg) {
-//     $showTopBg = $topBg['site_bg'];
-// }
+foreach ($settopbar as $topall) {
+    $showPhone = $topall['site_phone'];
+    $showTopBg = $topall['site_bg'];
+}
 
 if (isset($_POST['site_topbar'])) {
 

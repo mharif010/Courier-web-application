@@ -19,7 +19,6 @@ foreach ($logo as $lgo) {
     $showlogo = $lgo['website_logo'];
 }
 
-
 if (isset($_POST['website_settings'])) {
 
     $title = $_POST['title'];
@@ -37,11 +36,11 @@ if (isset($_POST['website_settings'])) {
         }
     }
 
-    if (!empty($title)) {
+    if (!empty($title) && $showTitle !== $title) {
         $updateSetting->settitle($title);
     }
 
-    if (!empty($tagline)) {
+    if (!empty($tagline) && $showTagline !== $tagline ) {
         $updateSetting->setTagline($tagline);
     }
 }

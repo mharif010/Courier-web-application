@@ -6,6 +6,7 @@ include('./handler/settingHandler.php');
 
   <div class="row">
     <div class="col-sm-6 mb-4 mb-xl-0">
+      <h4 class="font-weight-bold text-dark">Site settings from here.</h4><br>
 
       <form action="" method="POST" class="forms-sample" enctype="multipart/form-data">
         <div class="form-group row">

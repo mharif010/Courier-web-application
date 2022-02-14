@@ -14,17 +14,17 @@ class topbarController
         return $result;
     }
 
-    // public function getPhone()
-    // {
-    //     $query = "SELECT `site_phone` FROM `website_topbar` WHERE 1;";
-    //     $result = $this->conn->query($query);
+    public function getTopbar()
+    {
+        $query = "SELECT * FROM `website_topbar` WHERE 1;";
+        $result = $this->conn->query($query);
 
-    //     if ($result->num_rows > 0) {
-    //         return $result;
-    //     } else {
-    //         return false;
-    //     }
-    // }
+        if ($result->num_rows > 0) {
+            return $result;
+        } else {
+            return false;
+        }
+    }
 
     public function setTopbg($topbar_bg)
     {
@@ -33,15 +33,4 @@ class topbarController
         return $result;
     }
 
-    // public function getTopbg()
-    // {
-    //     $query = "SELECT `site_bg` FROM `website_topbar` WHERE 1;";
-    //     $result = $this->conn->query($query);
-
-    //     if ($result->num_rows > 0) {
-    //         return $result;
-    //     } else {
-    //         return false;
-    //     }
-    // }
 }

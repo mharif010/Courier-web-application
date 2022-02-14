@@ -13,16 +13,16 @@ $auth->isLoggedIn();
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Regal Admin</title>
   <!-- base:css -->
-  <link rel="stylesheet" href="admin/vendors/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="admin/vendors/feather/feather.css">
-  <link rel="stylesheet" href="admin/vendors/base/vendor.bundle.base.css">
+  <link rel="stylesheet" href="admin/assets/vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="admin/assets/vendors/feather/feather.css">
+  <link rel="stylesheet" href="admin/assets/vendors/base/vendor.bundle.base.css">
   <!-- endinject -->
   <!-- plugin css for this page -->
   <!-- End plugin css for this page -->
   <!-- inject:css -->
-  <link rel="stylesheet" href="admin/css/style.css">
+  <link rel="stylesheet" href="admin/assets/css/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="admin/images/favicon.png" />
+  <link rel="shortcut icon" href="admin/assets/images/favicon.png" />
 </head>
 
 <body>
@@ -78,12 +78,12 @@ $auth->isLoggedIn();
   </div>
   <!-- container-scroller -->
   <!-- base:js -->
-  <script src="admin/vendors/base/vendor.bundle.base.js"></script>
+  <script src="admin/assets/vendors/base/vendor.bundle.base.js"></script>
   <!-- endinject -->
   <!-- inject:js -->
-  <script src="admin/js/off-canvas.js"></script>
-  <script src="admin/js/hoverable-collapse.js"></script>
-  <script src="admin/js/template.js"></script>
+  <script src="admin/assets/js/off-canvas.js"></script>
+  <script src="admin/assets/js/hoverable-collapse.js"></script>
+  <script src="admin/assets/js/template.js"></script>
   <!-- endinject -->
 </body>
 

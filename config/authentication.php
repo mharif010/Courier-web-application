@@ -1,23 +1,21 @@
 <?php
-
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/classes/loginController.php');
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/classes/registerController.php');
-
+include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/controller/loginController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/controller/registerController.php');
 
 $auth = new LoginController;
-
-if (isset($_POST['logout_btn'])) {
-    $checkedlogout = $auth->logout();
-    if ($checkedlogout) {
-        redirect("Logout successfully", "login.php");
-    }
-}
+// if (isset($_POST['logout_btn'])) {
+//     $checkedlogout = $auth->logout();
+//     if ($checkedlogout) {
+//         redirect("Logout successfully", "login.php");
+//     }
+// }
 
 if (isset($_POST['login_btn'])) {
 
     $email = validateInput($db->conn, $_POST['email']);
     $pass = validateInput($db->conn, $_POST['pass']);
 
+    
     $checkLogin = $auth->userLogin($email, $pass);
     if ($checkLogin) {
         redirect("Logged in successfully", "admin/index.php");

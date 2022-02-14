@@ -1,5 +1,4 @@
 <?php
-include('../config/session.php');
 include('../config/app.php');
 
 if (!defined($_SESSION['authenticated'])) {
@@ -8,8 +7,14 @@ if (!defined($_SESSION['authenticated'])) {
 if ($_SESSION['authenticated'] == false) {
     redirect('', 'login.php');
 }
-include('../config/authentication.php');
-//include('./handler/settingHandler.php');
+if (isset($_POST['logout_btn'])) {
+    if(isset($_SESSION['authenticated']) === TRUE){
+        unset($_SESSION['authenticated']);
+        unset($_SESSION['auth_user']);
+        redirect("Logout successfully", "login.php");
+    }
+}
+include('./handler/settingHandler.php');
 ?>
 
 <!DOCTYPE html>
@@ -23,20 +28,52 @@ include('../config/authentication.php');
         <?php echo $showTitle; ?>
     </title>
     <!-- base:css -->
-    <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="vendors/feather/feather.css">
-    <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
+    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/vendors/feather/feather.css">
+    <link rel="stylesheet" href="assets/vendors/base/vendor.bundle.base.css">
     <!-- endinject -->
     <!-- plugin css for this page -->
-    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css" />
-    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="vendors/jquery-bar-rating/fontawesome-stars-o.css">
-    <link rel="stylesheet" href="vendors/jquery-bar-rating/fontawesome-stars.css">
+    <link rel="stylesheet" href="assets/vendors/flag-icon-css/css/flag-icon.min.css" />
+    <link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendors/jquery-bar-rating/fontawesome-stars-o.css">
+    <link rel="stylesheet" href="assets/vendors/jquery-bar-rating/fontawesome-stars.css">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="uploads/<?php echo $showlogo; ?>" />
+    <script src="https://cdn.tiny.cloud/1/nuwlel4l5xzbmz8bv1vqybnbrsixi4r5nb42uv9cw8zhqvn7/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>  
+    <script>
+    tinymce.init({
+        selector:'#about',
+        height: 500,
+        codesample_languages: [
+                {text: 'HTML/XML', value: 'markup'},
+                {text: 'JavaScript', value: 'javascript'},
+                {text: 'CSS', value: 'css'},
+            ],
+        });
+    tinymce.init({
+        selector:'#about1',
+        height: 500,
+        codesample_languages: [
+                {text: 'HTML/XML', value: 'markup'},
+                {text: 'JavaScript', value: 'javascript'},
+                {text: 'CSS', value: 'css'},
+            ],
+        });
+
+    tinymce.init({
+        selector:'#about2',
+        height: 500,
+        codesample_languages: [
+                {text: 'HTML/XML', value: 'markup'},
+                {text: 'JavaScript', value: 'javascript'},
+                {text: 'CSS', value: 'css'},
+            ],
+        });
+    </script> 
+    
 </head>
 
 <body>
@@ -44,11 +81,11 @@ include('../config/authentication.php');
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo" href="index.html">
-                    <h2>CMS</h2>
+                <a class="navbar-brand brand-logo" target="_blank" href="<?php echo '../index.php'?>">
+                    <h2 style="font-size: 22px; color: white;">Site View</h2>
                 </a>
-                <a class="navbar-brand brand-logo-mini" href="index.html">
-                    <h2>C</h2>
+                <a class="navbar-brand brand-logo-mini" target="_blank" href="<?php echo '../index.php'?>">
+                    <h2>S</h2>
                 </a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
@@ -105,6 +142,37 @@ include('../config/authentication.php');
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#homepage" aria-expanded="false" aria-controls="ui-basic">
+                            <i class="icon-disc menu-icon"></i>
+                            <span class="menu-title">Home Page</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="homepage">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="<?php echo "banner.php"; ?>">Banner Part</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="<?php echo "about-home.php"; ?>">About Part</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="<?php echo "calculate.php"; ?>">Calculate Part</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="<?php echo "steps-one.php"; ?>">Steps One</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="<?php echo "delivery.php"; ?>">Delivery Part</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="<?php echo "testimonial.php"; ?>">Testimonial Part</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="<?php echo "pricing.php"; ?>">Pricing Part</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo "about.php"; ?>">
+                            <i class="icon-box menu-icon"></i>
+                            <span class="menu-title">About Page</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo "settings.php"; ?>">
+                            <i class="icon-box menu-icon"></i>
+                            <span class="menu-title">Tracking Page</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link" data-toggle="collapse" href="#settings" aria-expanded="false" aria-controls="ui-basic">
                             <i class="icon-disc menu-icon"></i>
                             <span class="menu-title">Site Settings</span>
@@ -112,12 +180,12 @@ include('../config/authentication.php');
                         </a>
                         <div class="collapse" id="settings">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="<?php echo "settings.php"; ?>">Site identity</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="<?php echo "topbar.php"; ?>">Site Topbar</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="<?php echo "settings.php"; ?>">General</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="<?php echo "topbar.php"; ?>">Site Header</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="<?php echo "site-footer.php"; ?>">Site footer</a></li>
                             </ul>
                         </div>
                     </li>
-
 
                 </ul>
             </nav>

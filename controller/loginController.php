@@ -40,15 +40,15 @@ class LoginController{
         }
     }
 
-    public function logout(){
-        if(isset($_SESSION['authenticated']) === TRUE){
-            unset($_SESSION['authenticated']);
-            unset($_SESSION['auth_user']);
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
+    // public function logout(){
+    //     if(isset($_SESSION['authenticated']) === TRUE){
+    //         unset($_SESSION['authenticated']);
+    //         unset($_SESSION['auth_user']);
+    //         return true;
+    //     }
+    //     else{
+    //         return false;
+    //     }
+    // }
 
 }

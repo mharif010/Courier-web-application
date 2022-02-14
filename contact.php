@@ -1,5 +1,5 @@
 <?php 
-require_once('includes/header.php'); ?>
+require_once('header.php'); ?>
 
             <!-- Content Wrapper -->
             <article> 
@@ -87,4 +87,4 @@ require_once('includes/header.php'); ?>
             <!-- /.Content Wrapper -->
 
 <?php 
-require_once('includes/footer.php');
+require_once('footer.php');

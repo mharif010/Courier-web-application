@@ -1,5 +1,14 @@
 <?php
-include_once('session.php');
+session_start();
+
+define('SITE_URL', 'http://localhost:8080/courier/');
+
+function redirect( $message, $page ){
+    $redirectTo = SITE_URL.$page;
+    $_SESSION['message'] = "$message";
+    header("Location: $redirectTo");
+    exit(0);
+}
 
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
