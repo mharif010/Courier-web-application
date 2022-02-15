@@ -72,6 +72,15 @@ include('./handler/settingHandler.php');
                 {text: 'CSS', value: 'css'},
             ],
         });
+        tinymce.init({
+        selector:'#about3',
+        height: 500,
+        codesample_languages: [
+                {text: 'HTML/XML', value: 'markup'},
+                {text: 'JavaScript', value: 'javascript'},
+                {text: 'CSS', value: 'css'},
+            ],
+        });
     </script> 
     
 </head>
@@ -156,6 +165,8 @@ include('./handler/settingHandler.php');
                                 <li class="nav-item"> <a class="nav-link" href="<?php echo "delivery.php"; ?>">Delivery Part</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="<?php echo "testimonial.php"; ?>">Testimonial Part</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="<?php echo "pricing.php"; ?>">Pricing Part</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="<?php echo "steps-two.php"; ?>">Steps Two</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="<?php echo "contact-home.php"; ?>">Contact Part</a></li>
                             </ul>
                         </div>
                     </li>
@@ -165,10 +176,25 @@ include('./handler/settingHandler.php');
                             <span class="menu-title">About Page</span>
                         </a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo "settings.php"; ?>">
+                        <a class="nav-link" data-toggle="collapse" href="#services" aria-expanded="false" aria-controls="ui-basic">
+                            <i class="icon-disc menu-icon"></i>
+                            <span class="menu-title">Service Page</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="services">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="<?php echo "services.php"; ?>">All Services</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="<?php echo "add-service.php"; ?>">Add New Service</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo "contact.php"; ?>">
                             <i class="icon-box menu-icon"></i>
-                            <span class="menu-title">Tracking Page</span>
+                            <span class="menu-title">Contact Page</span>
                         </a>
                     </li>
 

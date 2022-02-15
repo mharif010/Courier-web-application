@@ -1,5 +1,9 @@
 <?php 
-require_once('header.php'); ?>
+require_once('header.php'); 
+include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/serviceController.php');
+$setService = new serviceController;
+$services    = $setService->getService();
+?>
     <article> 
         <!-- Breadcrumb -->
         <section class="theme-breadcrumb pad-50">                
@@ -25,68 +29,24 @@ require_once('header.php'); ?>
         <section class="pricing-wrap pad-80">                
             <div class="theme-container container">                            
                 <div class="row pb-50">
-                    <div class="col-md-4 wow fadeInUp" data-wow-offset="50" data-wow-delay=".30s">
+                    <?php if( !empty($services) ){ 
+                        while($row = $services->fetch_array()){
+                        ?>  
+                    <div class="col-md-4 wow fadeInUp" style="margin-bottom:30px;" data-wow-offset="50" data-wow-delay=".30s">
                 
                         <div class="box"> 
-                            <img src="assets/img/Screenshot_3.jpg" alt="tile3">
+                            <img src="admin/uploads/<?php echo $row['image']; ?>" alt="tile3">
                             <div class="overbox">
-                                <div class="tagline overtext"> According to our professional business consultants, telemarketing service is a brisk and moderate technique to contact forthcoming clients specifically via telephone and in this manner even up close to convince them to purchase a service or product. </div>
+                                <div class="tagline overtext"><?php echo $row['content']; ?> </div>
                             </div>
-                            <h2>Hello text here</h2>
+                            <h2><?php echo $row['title']; ?></h2>
                         </div>
 
                     </div>
-                    <div class="col-md-4 wow fadeInUp" data-wow-offset="50" data-wow-delay=".40s">
-                        <div class="box"> 
-                            <img src="assets/img/Screenshot_1.jpg" alt="tile3">
-                            <div class="overbox">
-                                <div class="tagline overtext"> According to our professional business consultants, telemarketing service is a brisk and moderate technique to contact forthcoming clients specifically via telephone and in this manner even up close to convince them to purchase a service or product. </div>
-                            </div>
-                            <h2>Hello text here</h2>
-                        </div>
-                    </div>
-                    <div class="col-md-4 wow fadeInUp" data-wow-offset="50" data-wow-delay=".40s">
-                            <div class="box"> 
-                            <img src="assets/img/Screenshot_2.jpg" alt="tile3">
-                            <div class="overbox">
-                                <div class="tagline overtext"> According to our professional business consultants, telemarketing service is a brisk and moderate technique to contact forthcoming clients specifically via telephone and in this manner even up close to convince them to purchase a service or product. </div>
-                            </div>
-                            <h2>Hello text here</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row pb-50">
-                    <div class="col-md-4 wow fadeInUp" data-wow-offset="50" data-wow-delay=".30s">
-                
-                        <div class="box"> 
-                            <img src="assets/img/Screenshot_3.jpg" alt="tile3">
-                            <div class="overbox">
-                                <div class="tagline overtext"> According to our professional business consultants, telemarketing service is a brisk and moderate technique to contact forthcoming clients specifically via telephone and in this manner even up close to convince them to purchase a service or product. </div>
-                            </div>
-                            <h2>Hello text here</h2>
-                        </div>
-
-                    </div>
-                    <div class="col-md-4 wow fadeInUp" data-wow-offset="50" data-wow-delay=".40s">
-                        <div class="box"> 
-                            <img src="assets/img/Screenshot_1.jpg" alt="tile3">
-                            <div class="overbox">
-                                <div class="tagline overtext"> According to our professional business consultants, telemarketing service is a brisk and moderate technique to contact forthcoming clients specifically via telephone and in this manner even up close to convince them to purchase a service or product. </div>
-                            </div>
-                            <h2>Hello text here</h2>
-                        </div>
-                    </div>
-                    <div class="col-md-4 wow fadeInUp" data-wow-offset="50" data-wow-delay=".40s">
-                            <div class="box"> 
-                            <img src="assets/img/Screenshot_2.jpg" alt="tile3">
-                            <div class="overbox">
-                                <div class="tagline overtext"> According to our professional business consultants, telemarketing service is a brisk and moderate technique to contact forthcoming clients specifically via telephone and in this manner even up close to convince them to purchase a service or product. </div>
-                            </div>
-                            <h2>Hello text here</h2>
-                        </div>
-                    </div>
-                </div>
-                
+                    <?php } }else{
+                       echo '<div class="alert alert-danger"><em>No records were found.</em></div>';  
+                     } ?>                  
+                </div>    
             </div>               
         </section>
         <!-- /.services -->

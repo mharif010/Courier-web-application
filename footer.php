@@ -1,10 +1,15 @@
- <!-- Footer -->
+<?php 
+include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/handler/footerHandler.php');
+
+?>
+<!-- Footer -->
             <footer>
                 <div class="footer-main pad-120 white-clr">
                     <div class="theme-container container">               
                         <div class="row">
                             <div class="col-md-3 col-sm-6 footer-widget footer-about">
-                                <a href="#"> <img class="logo" alt="#" src="assets/img/logo/logo-white.png" />  </a>
+                                <a href="#"> <img class="logo" alt="#" src="admin/uploads/<?php echo $showFooterLogo; ?>" />  </a>
+                                <?php //echo $showFooterContent; ?>
                                 <p><i class="fa fa-map-marker" aria-hidden="true"></i> HOUSE-2/C,ROAD-08, SECTOR-07,</p><p style="margin-left: 17px;"> UTTARA, DHAKA-1230.</p>
                                 <p><i class="fa fa-envelope-o" aria-hidden="true"></i> info@doorping.com<br> <i class="fa fa-phone" aria-hidden="true"></i> +8801711368635</p>
                             </div>

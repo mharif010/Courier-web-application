@@ -89,3 +89,24 @@ foreach($setPricing as $Pricing){
     $showPriceContent2 = $Pricing['content_two'];
     $showPriceContent3 = $Pricing['content_three'];
 }
+
+include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/stepsTwoController.php');
+
+$settingStepstwo = new stepsTwoController;
+$setStepstwo = $settingStepstwo->getStepstwo();
+
+foreach($setStepstwo as $Stepstwo){
+    $showContent2 = $Stepstwo['content'];
+    $showStepsImg2 = $Stepstwo['image'];
+    $showStepsbgImg2 = $Stepstwo['bg_image'];
+}
+
+include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/homeContactController.php');
+
+$settingContacthome = new homeContactController;
+$setContacthome = $settingContacthome->getContacthome();
+
+foreach($setContacthome as $Contacthome){
+    $showHomecontactContent = $Contacthome['content'];
+    $showHomecontactImage   = $Contacthome['image'];
+}

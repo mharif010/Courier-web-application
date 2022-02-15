@@ -325,56 +325,24 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/handler/homeHandler.php');
     <!-- /.Apps -->
 
     <!-- Steps -->
-    <section class="steps-wrap mask-overlay pad-80">
+    <!-- Steps -->
+    <section class="steps-wrap mask-overlay pad-80" style="background-image: url('admin/uploads/<?php echo $showStepsbgImg2; ?>');">
         <div class="theme-container container">
             <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="font-2 fs-50 wow fadeInLeft" data-wow-offset="50" data-wow-delay=".20s"> 1. </div>
-                    <div class="steps-content wow fadeInLeft" data-wow-offset="50" data-wow-delay=".25s">
-                        <h2 class="title-3">Order</h2>
-                        <p class="gray-clr">Duis autem vel eum iriur <br> hendrerit in vulputate</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="font-2 fs-50 wow fadeInLeft" data-wow-offset="50" data-wow-delay=".20s"> 2. </div>
-                    <div class="steps-content wow fadeInLeft" data-wow-offset="50" data-wow-delay=".25s">
-                        <h2 class="title-3">Wait</h2>
-                        <p class="gray-clr">Duis autem vel eum iriur <br> hendrerit in vulputate</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="font-2 fs-50 wow fadeInLeft" data-wow-offset="50" data-wow-delay=".20s"> 3. </div>
-                    <div class="steps-content wow fadeInLeft" data-wow-offset="50" data-wow-delay=".25s">
-                        <h2 class="title-3">Deliver</h2>
-                        <p class="gray-clr">Duis autem vel eum iriur <br> hendrerit in vulputate</p>
-                    </div>
-                </div>
+                <?php echo $showContent2; ?>
             </div>
         </div>
-        <div class="step-img wow slideInRight" data-wow-offset="50" data-wow-delay=".20s"> <img src="assets/img/block/step-img.png" alt="" /> </div>
+        <div class="step-img wow slideInRight" data-wow-offset="50" data-wow-delay=".20s"> <img src="admin/uploads/<?php echo $showStepsImg2; ?>" alt="" /> </div>
     </section>
+    <!-- /.Steps -->
     <!-- /.Steps -->
 
     <!-- Contact us -->
-    <section class="contact-wrap pad-120">
+    <section class="contact-wrap pad-120" style="background-image: url('admin/uploads/<?php echo $showHomecontactImage; ?>')">
         <div class="theme-container container">
             <div class="row">
                 <div class="col-md-6 col-sm-8">
-                    <div class="title-wrap">
-                        <h2 class="section-title wow fadeInLeft" data-wow-offset="50" data-wow-delay=".20s">contact us</h2>
-                        <p class="wow fadeInLeft" data-wow-offset="50" data-wow-delay=".20s">Get in touch with us easiky</p>
-                    </div>
-                    <ul class="contact-detail title-2">
-                        <li class="wow slideInUp" data-wow-offset="50" data-wow-delay=".20s"> <span>uk numbers:</span>
-                            <p class="gray-clr"> +001-2463-957 <br> +001-4356-643 </p>
-                        </li>
-                        <li class="wow slideInUp" data-wow-offset="50" data-wow-delay=".25s"> <span>usa numbers:</span>
-                            <p class="gray-clr"> +001-2463-957 <br> +001-4356-643 </p>
-                        </li>
-                        <li class="wow slideInUp" data-wow-offset="50" data-wow-delay=".30s"> <span>Email address:</span>
-                            <p class="gray-clr"> support@go.com <br> info@go.com </p>
-                        </li>
-                    </ul>
+                    <?php echo $showHomecontactContent; ?>
                 </div>
             </div>
         </div>
