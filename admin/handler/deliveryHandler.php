@@ -1,5 +1,5 @@
 <?php
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/deliveryController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/controller/deliveryController.php');
 
 $settingDelivery = new deliveryController;
 

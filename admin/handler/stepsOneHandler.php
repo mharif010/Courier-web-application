@@ -1,5 +1,5 @@
 <?php
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/stepsOneController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/controller/stepsOneController.php');
 
 $settingStepsone = new stepsOneController;
 

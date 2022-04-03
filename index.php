@@ -1,6 +1,6 @@
 <?php
 include('header.php');
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/handler/homeHandler.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/handler/homeHandler.php');
 
 
 ?>
@@ -132,7 +132,12 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/handler/homeHandler.php');
                                 </div>
                             </div>
                             <div class="pricing-condition">
-                                <?php echo $showCalContent; ?>
+                                <ul>
+                                    <li><i class="fa fa-check-circle"></i> <?php echo $showCalList1; ?></li>
+                                    <li><i class="fa fa-check-circle"></i> <?php echo $showCalList2; ?></li>
+                                    <li><i class="fa fa-check-circle"></i> <?php echo $showCalList3; ?></li>
+                                    <li><i class="fa fa-check-circle"></i> <?php echo $showCalList4; ?></li>
+                                </ul>
                             </div>
 
                         </form>
@@ -220,7 +225,7 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/handler/homeHandler.php');
     <!-- /.Testimonial -->
 
     <!-- Pricing & Plans -->
-    <section class="pricing-wrap pt-120">
+    <section class="pricing-wrap pt-120" id="pricing">
         <div class="theme-container container">
             <div class="title-wrap text-center  pb-50">
                 <h2 class="section-title wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s">Pricing & plans</h2>
@@ -253,13 +258,14 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/handler/homeHandler.php');
     <section class="pricing-wrap pt-120 pb-100">
         <div class="theme-container container">
             <div class="title-wrap text-center pb-10">
-                <p class="wow fadeInLeft" data-wow-offset="50" data-wow-delay=".25s">Right Time Right Place</p>
-                <h2 class="section-title wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s">Faster Mobile APP</h2>
-                <p class="wow fadeInLeft" data-wow-offset="50" data-wow-delay=".25s">Parcelwala Logistics is a prominent courier service provider based on Dhaka, Bangladesh. It promises to delivery your product to the right place, at the right time. Parcelwala has most efficient and dedicated delivery team with large numbers of transportation facilities. It is a tech based courier company that offers real-time tracking system via website and app to merchant and receiver. It also confirms the delivery status by secured OTP system.</p>
+                <p class="wow fadeInLeft" data-wow-offset="50" data-wow-delay=".25s"><?php echo $showAppsSubTitle; ?></p>
+                <h2 class="section-title wow fadeInUp" data-wow-offset="50" data-wow-delay=".20s"><?php echo $showAppsTitle; ?></h2>
+                <p class="wow fadeInLeft" data-wow-offset="50" data-wow-delay=".25s"><?php echo $showAppsContent; ?></p>
             </div>
             <div class="row">
                 <div class="col-md-3 wow slideInUp" data-wow-offset="50" data-wow-delay=".20s">
-                    <div class="apps-box">
+                    <?php echo $showAppsContent1; ?>
+                    <!-- <div class="apps-box">
                         <div class="icon"><i class="fa fa-compass" aria-hidden="true"></i></div>
                         <div class="text">
                             <h4 class="bottom15">
@@ -276,15 +282,16 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/handler/homeHandler.php');
                             </h4>
                             <p>Get the exact location and status of your consignments through our app.</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-md-6 active white-clr wow slideInUp" data-wow-offset="50" data-wow-delay=".25s">
                     <div class="image feature-item d-inline-block wow fadeIn my-5 my-md-0" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeIn;">
-                        <img src="https://parcelwala.com.bd/public/uploads/all/TzY0RUgoryXar0LmX7X8gWpzbMgolxcHfIl2fshh.gif" alt="mobile phones">
+                        <img src="admin/uploads/<?php echo $showAppsImage; ?>" alt="mobile phones">
                     </div>
                 </div>
                 <div class="col-md-3 wow slideInUp" data-wow-offset="50" data-wow-delay=".30s">
-                    <div class="apps-box">
+                    <?php echo $showAppsContent2; ?>
+                    <!-- <div class="apps-box">
                         <div class="icon"><i class="fa fa-home" aria-hidden="true"></i></div>
                         <div class="text">
                             <h4 class="bottom15">
@@ -301,19 +308,21 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/handler/homeHandler.php');
                             </h4>
                             <p>Get the exact location and status of your consignments through our app.</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="row d-flex align-items-center">
                 <div class="col-md-12 text-center">
                     <div class="flex social-btns" style="margin-top:20px;">
-                        <a class="app-btn blu flex vert" href="https://play.google.com/store/apps/details?id=com.stitbd.parcelwala">
-                            <i class="fa fa-play" aria-hidden="true"></i>
-                            <p>Get it on <br> <span class="big-txt">Google Play</span></p>
+                        <a class="app-btn blu flex vert" href="<?php echo $showAppsPlaystore; ?>">
+                            <!-- <i class="fa fa-play" aria-hidden="true"></i>
+                            <p>Get it on <br> <span class="big-txt">Google Play</span></p> -->
+                            <img src="uploads/Google_Play_Button.png" alt="">
                         </a>
-                        <a class="app-btn blu flex vert" href="#">
-                            <i class="fa fa-apple" aria-hidden="true"></i>
-                            <p>Get it on <br> <span class="big-txt">App Store</span></p>
+                        <a class="app-btn blu flex vert" href="<?php echo $showAppsAppstore; ?>">
+                        <img src="uploads/appstore.png" alt="">
+                            <!-- <i class="fa fa-apple" aria-hidden="true"></i>
+                            <p>Get it on <br> <span class="big-txt">App Store</span></p> -->
                         </a>
 
 

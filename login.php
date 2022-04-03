@@ -11,7 +11,7 @@ $auth->isLoggedIn();
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Regal Admin</title>
+  <title>DoorPing Express Ltd</title>
   <!-- base:css -->
   <link rel="stylesheet" href="admin/assets/vendors/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="admin/assets/vendors/feather/feather.css">
@@ -22,7 +22,7 @@ $auth->isLoggedIn();
   <!-- inject:css -->
   <link rel="stylesheet" href="admin/assets/css/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="admin/assets/images/favicon.png" />
+  <link rel="shortcut icon" href="admin/uploads/favicon.png" />
 </head>
 
 <body>
@@ -31,12 +31,11 @@ $auth->isLoggedIn();
       <div class="content-wrapper d-flex align-items-center auth px-0">
         <div class="row w-100 mx-0">
           <div class="col-lg-4 mx-auto">
-            <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+            <div class="auth-form-light text-center py-5 px-4 px-sm-5">
               <div class="brand-logo">
-                <h1>DoorPing</h1>
+                <img src="admin/uploads/login-logo.png">
               </div>
               <h4>Hello! let's get started</h4>
-              <h6 class="font-weight-light">Sign in to continue.</h6>
               <form action="" method="post" class="pt-3">
                 <div class="form-group">
                   <input type="email" name="email" class="form-control form-control-lg" placeholder="Email">
@@ -62,7 +61,7 @@ $auth->isLoggedIn();
                   </button>
                 </div>
                 <div class="text-center mt-4 font-weight-light">
-                  Don't have an account? <a href="register.html" class="text-primary">Create</a>
+                  Don't have an account? <a href="register.php" class="text-primary">Create</a>
                 </div>
               </form>
             </div>

@@ -1,6 +1,6 @@
 <?php
 include('header.php');
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/serviceController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/controller/serviceController.php');
 $setService = new serviceController;
 $services    = $setService->getService();
  ?>
@@ -25,7 +25,7 @@ $services    = $setService->getService();
                                 echo "<th>#Serial</th>";
                                 echo "<th>Post Title</th>";
                                 echo "<th>Post Content</th>";
-                                echo "<th>Publish Date</th>";
+                                echo "<th>Image</th>";
                                 echo "<th>Action</th>";
                             echo "</tr>";
                         echo "</thead>";

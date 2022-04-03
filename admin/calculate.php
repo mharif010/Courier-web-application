@@ -18,12 +18,47 @@ include('handler/calculateHandler.php');
                     </div>
                 </div>
 
-                <div class="form-group row">
+                <div class="form-group row main-list">
+                    <label for="exampleTextarea1" class="col-sm-4 col-form-label">Change Calculate Content List</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="list1" class="form-control" placeholder="Enter List Item Here" value="<?php echo $showList1;  ?>">
+                    </div>
+                </div>
+
+                <div class="form-group row main-list">
+                    <label for="exampleTextarea1" class="col-sm-4 col-form-label">Change Calculate Content List</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="list2" class="form-control" placeholder="Enter List Item Here" value="<?php echo $showList2; ?>">
+                    </div>
+                </div>
+
+                <div class="form-group row main-list">
+                    <label for="exampleTextarea1" class="col-sm-4 col-form-label">Change Calculate Content List</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="list3" class="form-control" placeholder="Enter List Item Here" value="<?php echo $showList3; ?>">
+                    </div>
+                </div>
+
+                <div class="form-group row main-list">
+                    <label for="exampleTextarea1" class="col-sm-4 col-form-label">Change Calculate Content List</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="list4" class="form-control" placeholder="Enter List Item Here" value="<?php echo $showList4; ?>">
+                    </div>
+                </div>
+
+               
+                
+
+                
+
+                
+
+                <!-- <div class="form-group row">
                     <label for="exampleTextarea1" class="col-sm-4 col-form-label">Change Calculate Content</label>
                     <div class="col-sm-8">
                         <textarea class="form-control" id="about" name="content" placeholder="Type about content...." rows="4"><?php echo $showContent; ?></textarea>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="form-group row">
                     <label for="exampleInputMobile" class="col-sm-4 col-form-label">Change Calculate Image</label>
@@ -45,5 +80,7 @@ include('handler/calculateHandler.php');
 </div>
 
 <?php include('footer.php'); ?>
+
+
 
 

@@ -1,5 +1,5 @@
 <?php
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/serviceController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/controller/serviceController.php');
 $setService = new serviceController;
 
 

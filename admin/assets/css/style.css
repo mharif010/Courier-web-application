@@ -22824,3 +22824,33 @@ dl li {
 }
 
 /*# sourceMappingURL=maps/style.css.map */
+.sidebar {
+    background: #33cc99;
+}
+.navbar .navbar-brand-wrapper {
+    background: #28b787;
+}
+.sidebar .nav .nav-item .nav-link {
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #fff;
+}
+.sidebar .nav:not(.sub-menu) > .nav-item:hover > .nav-link {
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #fff;
+    border: none !important;
+}
+.sidebar .nav .nav-item.active + .nav-item .nav-link {
+    border-top: 1px solid #33cc99;
+}
+.sidebar .nav .nav-item:hover{
+  border: none;
+}
+/* .sidebar .nav .nav-item .nav-link {
+    border: none !important;
+} */
+.auth .brand-logo img {
+    width: auto !important;
+}
+body{
+  background-color: #e2e2e2;
+}

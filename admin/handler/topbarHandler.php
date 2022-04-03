@@ -1,5 +1,5 @@
 <?php
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/topbarController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/controller/topbarController.php');
 
 $topbarSetting = new topbarController;
 

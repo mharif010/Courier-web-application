@@ -7,9 +7,27 @@ class footerController
         $this->conn = $db->conn;
     }
 
-    public function setContent($args)
+    public function setContent1($args)
     {
-        $query = "UPDATE `website_footer` SET `content`= '$args' WHERE 1";
+        $query = "UPDATE `website_footer` SET `add_1`= '$args' WHERE 1";
+        $result = $this->conn->query($query);
+        return $result;
+    }
+    public function setContent2($args)
+    {
+        $query = "UPDATE `website_footer` SET `add_2`= '$args' WHERE 1";
+        $result = $this->conn->query($query);
+        return $result;
+    }
+    public function setContent3($args)
+    {
+        $query = "UPDATE `website_footer` SET `add_3`= '$args' WHERE 1";
+        $result = $this->conn->query($query);
+        return $result;
+    }
+    public function setContent4($args)
+    {
+        $query = "UPDATE `website_footer` SET `add_4`= '$args' WHERE 1";
         $result = $this->conn->query($query);
         return $result;
     }
@@ -17,6 +35,12 @@ class footerController
     public function setImage($args)
     {
         $query = "UPDATE `website_footer` SET `image`= '$args' WHERE 1";
+        $result = $this->conn->query($query);
+        return $result;
+    }
+    public function setCopyright($args)
+    {
+        $query = "UPDATE `website_footer` SET `copyright`= '$args' WHERE 1";
         $result = $this->conn->query($query);
         return $result;
     }

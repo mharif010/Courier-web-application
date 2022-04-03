@@ -1,5 +1,5 @@
 <?php
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/testimonialController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/controller/testimonialController.php');
 
 $settingTestimonial = new testimonialController;
 

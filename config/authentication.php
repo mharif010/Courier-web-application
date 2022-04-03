@@ -1,6 +1,6 @@
 <?php
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/controller/loginController.php');
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/controller/registerController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/controller/loginController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/controller/registerController.php');
 
 $auth = new LoginController;
 // if (isset($_POST['logout_btn'])) {

@@ -1,5 +1,5 @@
 <?php
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/aboutController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/controller/aboutController.php');
 
 $settingAbout = new AboutController;
 

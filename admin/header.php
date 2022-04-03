@@ -41,7 +41,7 @@ include('./handler/settingHandler.php');
     <!-- inject:css -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- endinject -->
-    <link rel="shortcut icon" href="uploads/<?php echo $showlogo; ?>" />
+    <link rel="shortcut icon" href="uploads/favicon.png" />
     <script src="https://cdn.tiny.cloud/1/nuwlel4l5xzbmz8bv1vqybnbrsixi4r5nb42uv9cw8zhqvn7/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>  
     <script>
     tinymce.init({
@@ -91,7 +91,7 @@ include('./handler/settingHandler.php');
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
                 <a class="navbar-brand brand-logo" target="_blank" href="<?php echo '../index.php'?>">
-                    <h2 style="font-size: 22px; color: white;">Site View</h2>
+                    <h2 style="font-size: 22px; color: white;">View Site</h2>
                 </a>
                 <a class="navbar-brand brand-logo-mini" target="_blank" href="<?php echo '../index.php'?>">
                     <h2>S</h2>
@@ -137,7 +137,7 @@ include('./handler/settingHandler.php');
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <div class="user-profile">
                     <div class="user-image">
-                        <img src="uploads/<?php echo $showlogo; ?>">
+                        <img src="uploads/Author-image .jpg">
                     </div>
                     <div class="user-name">
                         Admin Panel
@@ -165,6 +165,7 @@ include('./handler/settingHandler.php');
                                 <li class="nav-item"> <a class="nav-link" href="<?php echo "delivery.php"; ?>">Delivery Part</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="<?php echo "testimonial.php"; ?>">Testimonial Part</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="<?php echo "pricing.php"; ?>">Pricing Part</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="<?php echo "apps-ads.php"; ?>">Apps Advertise</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="<?php echo "steps-two.php"; ?>">Steps Two</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="<?php echo "contact-home.php"; ?>">Contact Part</a></li>
                             </ul>
@@ -195,6 +196,13 @@ include('./handler/settingHandler.php');
                         <a class="nav-link" href="<?php echo "contact.php"; ?>">
                             <i class="icon-box menu-icon"></i>
                             <span class="menu-title">Contact Page</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo "privacy.php"; ?>">
+                            <i class="icon-box menu-icon"></i>
+                            <span class="menu-title">Privacy Page</span>
                         </a>
                     </li>
 

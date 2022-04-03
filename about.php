@@ -1,6 +1,6 @@
 <?php 
 require_once('header.php'); 
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/handler/aboutHandler.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/handler/aboutHandler.php');
 ?>
 
  <!-- Content Wrapper -->

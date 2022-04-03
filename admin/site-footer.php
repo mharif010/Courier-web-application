@@ -17,10 +17,44 @@ include('handler/footerHandler.php');
                     </div>
                 </div>
 
-                <div class="form-group row">
+                <div class="form-group row main-list">
+                    <label for="exampleTextarea1" class="col-sm-4 col-form-label">Change Footer House </label>
+                    <div class="col-sm-8">
+                        <input type="text" name="add1" class="form-control" placeholder="Enter List Item Here" value="<?php echo $showFooterContent1; ?>">
+                    </div>
+                </div>
+
+                <div class="form-group row main-list">
+                    <label for="exampleTextarea1" class="col-sm-4 col-form-label">Change Footer City</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="add2" class="form-control" placeholder="Enter List Item Here" value="<?php echo $showFooterContent2; ?>">
+                    </div>
+                </div>
+                <div class="form-group row main-list">
+                    <label for="exampleTextarea1" class="col-sm-4 col-form-label">Change Footer Email</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="add3" class="form-control" placeholder="Enter List Item Here" value="<?php echo $showFooterContent3; ?>">
+                    </div>
+                </div>
+
+                <div class="form-group row main-list">
+                    <label for="exampleTextarea1" class="col-sm-4 col-form-label">Change Footer Phone</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="add4" class="form-control" placeholder="Enter phone number Here" value="<?php echo $showFooterContent4; ?>">
+                    </div>
+                </div>
+
+                <!-- <div class="form-group row">
                     <label for="exampleTextarea1" class="col-sm-4 col-form-label">Change Footer Content</label>
                     <div class="col-sm-8">
-                        <textarea class="form-control" id="about" name="content" placeholder="Type steps content...." rows="4"><?php echo $showFooterContent; ?></textarea>
+                        <textarea class="form-control" id="about" name="content" placeholder="Type footer content...." rows="4"><?php echo $showFooterContent; ?></textarea>
+                    </div>
+                </div> -->
+
+                <div class="form-group row">
+                    <label for="exampleTextarea1" class="col-sm-4 col-form-label">Change Footer Copyrights</label>
+                    <div class="col-sm-8">
+                        <textarea class="form-control" name="copyright" placeholder="Type Copyright content...." rows="4"><?php echo $showFooterCopyright; ?></textarea>
                     </div>
                 </div>
                

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-define('SITE_URL', 'http://localhost:8080/courier/');
+define('SITE_URL', 'http://localhost:8080/');
 
 function redirect( $message, $page ){
     $redirectTo = SITE_URL.$page;

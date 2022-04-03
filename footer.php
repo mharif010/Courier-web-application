@@ -1,5 +1,5 @@
 <?php 
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/handler/footerHandler.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/handler/footerHandler.php');
 
 ?>
 <!-- Footer -->
@@ -9,26 +9,30 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/handler/footerHandler.p
                         <div class="row">
                             <div class="col-md-3 col-sm-6 footer-widget footer-about">
                                 <a href="#"> <img class="logo" alt="#" src="admin/uploads/<?php echo $showFooterLogo; ?>" />  </a>
-                                <?php //echo $showFooterContent; ?>
-                                <p><i class="fa fa-map-marker" aria-hidden="true"></i> HOUSE-2/C,ROAD-08, SECTOR-07,</p><p style="margin-left: 17px;"> UTTARA, DHAKA-1230.</p>
-                                <p><i class="fa fa-envelope-o" aria-hidden="true"></i> info@doorping.com<br> <i class="fa fa-phone" aria-hidden="true"></i> +8801711368635</p>
+                               
+                                <p><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo $showFooterContent1; ?></p>
+                                <p style="margin-left: 35px;"> <?php echo $showFooterContent2; ?></p>
+                                <p style="
+    font-size: 16px;
+    letter-spacing: 2px;"><i class="fa fa-envelope-o" aria-hidden="true"></i> <?php echo $showFooterContent3; ?><br> 
+                                <i class="fa fa-phone" aria-hidden="true"></i><a href="tel:<?php echo $showFooterContent4; ?>"> <?php echo $showFooterContent4; ?></a></p>
                             </div>
                             <div class="col-md-3 col-sm-6 footer-widget">
-                                <h2 class="title-1 fw-900">quick links</h2>
+                                <h2 class="title-1 fw-900">COMPANY</h2>
                                 <ul>
-                                    <li> <a href="#">sitemap</a> </li>
-                                    <li> <a href="#">pricing</a> </li>
-                                    <li> <a href="#">payment method</a> </li>
-                                    <li> <a href="#">support</a> </li>
+                                    <li> <a href="/about.php">About US</a> </li>
+                                    <li> <a href="/services.php">Our Services</a> </li>
+                                    <li> <a href="#pricing">Pricing & Plans</a> </li>
+                                    <li> <a href="/privacy.php">Privacy and Policy</a> </li>
                                 </ul>
                             </div>
                             <div class="col-md-3 col-sm-6 footer-widget">
-                                <h2 class="title-1 fw-900">important links</h2>
+                                <h2 class="title-1 fw-900">QUICK LINKS</h2>
                                 <ul>
-                                    <li> <a href="#">themeforest</a> </li>
-                                    <li> <a href="#">envato</a> </li>
-                                    <li> <a href="#">audiojungle</a> </li>
-                                    <li> <a href="#">videohibe</a> </li>
+                                    <li> <a data-toggle="modal" href="#login-popup">Become Marchent</a> </li>
+                                    <li> <a href="contact.php">Become Rider</a> </li>
+                                    <li> <a href="contact.php">Become Delivery Man</a> </li>
+                                    <li> <a data-toggle="modal" href="tel:+8801711368635">Helpline</a> </li>
                                 </ul>
                             </div>
                             <div class="col-md-3 col-sm-6 footer-widget">
@@ -54,7 +58,7 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/handler/footerHandler.p
                     <div class="theme-container container">               
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
-                                <p> © Copyright 2022, All rights reserved </p>                            
+                                <p> © <?php echo $showFooterCopyright; ?> </p>                            
                             </div>
                             <div class="col-md-6 col-sm-6 text-right">
                                 <p> Design and Develop  by <a href="https://xubisoft.com" class="main-clr"> Xubisoft Ltd. </a> </p>
@@ -79,23 +83,30 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/handler/footerHandler.p
 
                 <div class="modal-content">   
                     <div class="login-wrap text-center">                        
-                        <h2 class="title-3"> sign in </h2>
-                        <p> Sign in to <strong> GO </strong> for getting all details </p>                        
+                        <h2 class="title-3"> Become a Marchent </h2>
+                        <p> Sign up to <strong> GO </strong> for getting all details </p>                        
 
                         <div class="login-form clrbg-before">
                             <form class="login">
-                                <div class="form-group"><input type="text" placeholder="Email address" class="form-control"></div>
+                                <div class="form-group"><input type="text" placeholder="Name of Business" class="form-control"></div>
+                                <div class="form-group"><input type="text" placeholder="First Name" class="form-control"></div>
+                                <div class="form-group"><input type="text" placeholder="Last Name" class="form-control"></div>
+                                <div class="form-group">
+                                    <textarea type="text" placeholder="Address of your pickup Location" rows="4" cols="50" style="height:80px" class="form-control"></textarea>
+                                </div>
+                                <div class="form-group"><input type="text" placeholder="Phone Number" class="form-control"></div>
+                                <div class="form-group"><input type="email" placeholder="Email address" class="form-control"></div>
                                 <div class="form-group"><input type="password" placeholder="Password" class="form-control"></div>
                                 <div class="form-group">
-                                    <button class="btn-1 " type="submit"> Sign in now </button>
+                                    <button class="btn-1 " type="submit"> Submit now </button>
                                 </div>
                             </form>
                             <a href="#" class="gray-clr"> Forgot Passoword? </a>                            
                         </div>                        
                     </div>
                     <div class="create-accnt">
-                        <a href="#" class="white-clr"> Don’t have an account? </a>  
-                        <h2 class="title-2"> <a href="#" class="green-clr under-line">Create a free account</a> </h2>
+                        <a href="#" class="white-clr"> Do You have an account? </a>  
+                        <h2 class="title-2"> <a href="#" class="green-clr under-line">Login</a> </h2>
                     </div>
                 </div>
             </div>

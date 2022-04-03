@@ -1,5 +1,5 @@
 <?php
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/homeContactController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/controller/homeContactController.php');
 
 $settingContacthome = new homeContactController;
 

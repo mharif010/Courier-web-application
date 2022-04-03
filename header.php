@@ -1,7 +1,7 @@
 <?php
 include('config/app.php');
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/handler/settingHandler.php');
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/handler/topbarHandler.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/handler/settingHandler.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/handler/topbarHandler.php');
 
 ?>
 
@@ -15,7 +15,7 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/handler/topbarHandler.p
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- endinject -->
-    <link rel="shortcut icon" href="./admin/uploads/<?php echo $showlogo; ?>" />
+    <link rel="shortcut icon" href="./admin/uploads/favicon.png" />
     <!-- Bootstrap Css -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <!-- Bootstrap Select Css -->
@@ -26,7 +26,7 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/handler/topbarHandler.p
     <!-- OwlCarousel2 Slider Css -->
     <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
 
-
+    <link href="https://www.dafontfree.net/embed/YXJjb24tcmVndWxhciZkYXRhLzE2L2EvNzc3NzUvQXJjb24tUmVndWxhci5vdGY" rel="stylesheet" type="text/css"/>
     <!-- Animate Css -->
     <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
 
@@ -78,8 +78,8 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/handler/topbarHandler.p
                     <div class="row">
                         <div class="col-md-6 col-sm-5">
                             <ul class="list-items fs-10">
-                                <li><a href="#">sitemap</a></li>
-                                <li class="active"><a href="/courier/privacy.php">Privacy</a></li>
+                                <li><a href="sitemap.php">sitemap</a></li>
+                                <li class="active"><a href="privacy.php">Privacy</a></li>
                                 <li><a href="#">Pricing</a></li>
                             </ul>
                         </div>
@@ -88,7 +88,7 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/handler/topbarHandler.p
                         </div>
                     </div>
                 </div>
-                <a data-toggle="modal" href="#login-popup" class="sign-in fs-12 theme-clr-bg"> sign in </a>
+                <a data-toggle="modal" href="#login-popup" class="sign-in fs-12 theme-clr-bg"> Register Now </a>
             </div>
             <!-- /.Header Topbar -->
 
@@ -103,18 +103,18 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/handler/topbarHandler.p
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-logo" href="/courier"> <img src="./admin/uploads/<?php echo $showlogo; ?>" alt="logo" /> </a>
+                            <a class="navbar-logo" href=""> <img src="./admin/uploads/<?php echo $showlogo; ?>" alt="logo" /> </a>
                         </div>
                         <div class="col-md-10 col-sm-10 fs-12">
                             <div id="navbar" class="collapse navbar-collapse no-pad">
                                 <ul class="navbar-nav theme-menu">
                                     <li class="dropdown active">
-                                        <a href="/courier">Home </a>
+                                        <a href="">Home </a>
                                     </li>
-                                    <li> <a href="/courier/about.php"> About </a> </li>
-                                    <li> <a href="/courier/tracking.php"> Tracking </a> </li>
-                                    <li> <a href="/courier/services.php"> Services </a> </li>
-                                    <li> <a href="/courier/contact.php"> Contact </a> </li>
+                                    <li> <a href="/about.php"> About </a> </li>
+                                    <li> <a href="/tracking.php"> Tracking </a> </li>
+                                    <li> <a href="/services.php"> Services </a> </li>
+                                    <li> <a href="/contact.php"> Contact </a> </li>
                                     <li>
                                         <div class="search-wrapper">
                                             <div class="input-holder">

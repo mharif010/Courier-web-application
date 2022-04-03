@@ -1,6 +1,6 @@
 <?php
 
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/settingController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/controller/settingController.php');
 
 $updateSetting = new SettingController();
 

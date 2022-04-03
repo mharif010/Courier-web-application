@@ -1,11 +1,11 @@
 <?php
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/bannerController.php');
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/homeAboutController.php');
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/calculateController.php');
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/stepsOneController.php');
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/deliveryController.php');
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/pricingController.php');
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/testimonialController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/controller/bannerController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/controller/homeAboutController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/controller/calculateController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/controller/stepsOneController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/controller/deliveryController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/controller/pricingController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/controller/testimonialController.php');
 
 $bannerSetting = new BannerController;
 $setBanner = $bannerSetting->getBanner();
@@ -38,7 +38,10 @@ $setCalculate = $settingCalculate->getCalculate();
 
 foreach($setCalculate as $Calculate){
     $showCalTitle = $Calculate['title'];
-    $showCalContent = $Calculate['content'];
+    $showCalList1 = $Calculate['list_1'];
+    $showCalList2 = $Calculate['list_2'];
+    $showCalList3 = $Calculate['list_3'];
+    $showCalList4 = $Calculate['list_4'];
     $showCalImage   = $Calculate['image'];
 }
 
@@ -90,7 +93,7 @@ foreach($setPricing as $Pricing){
     $showPriceContent3 = $Pricing['content_three'];
 }
 
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/stepsTwoController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/controller/stepsTwoController.php');
 
 $settingStepstwo = new stepsTwoController;
 $setStepstwo = $settingStepstwo->getStepstwo();
@@ -101,7 +104,7 @@ foreach($setStepstwo as $Stepstwo){
     $showStepsbgImg2 = $Stepstwo['bg_image'];
 }
 
-include_once($_SERVER["DOCUMENT_ROOT"] . '/courier/admin/controller/homeContactController.php');
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/controller/homeContactController.php');
 
 $settingContacthome = new homeContactController;
 $setContacthome = $settingContacthome->getContacthome();
@@ -109,4 +112,20 @@ $setContacthome = $settingContacthome->getContacthome();
 foreach($setContacthome as $Contacthome){
     $showHomecontactContent = $Contacthome['content'];
     $showHomecontactImage   = $Contacthome['image'];
+}
+
+include_once($_SERVER["DOCUMENT_ROOT"] . '/admin/controller/homeAppsController.php');
+
+$settingApps = new homeAppsController;
+
+$setAbout = $settingApps->getAppshome();
+foreach($setAbout as $about){
+    $showAppsSubTitle = $about['subtitle'];
+    $showAppsTitle = $about['title'];
+    $showAppsContent = $about['content'];
+    $showAppsContent1 = $about['content1'];
+    $showAppsContent2 = $about['content2'];
+    $showAppsImage = $about['image'];
+    $showAppsPlaystore = $about['playstore_link'];
+    $showAppsAppstore = $about['appstore_link'];
 }

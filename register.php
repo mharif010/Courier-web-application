@@ -11,7 +11,7 @@ $auth->isLoggedIn();
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Regal Admin</title>
+  <title>DoorPing Express Ltd</title>
   <!-- base:css -->
   <link rel="stylesheet" href="admin/assets/vendors/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="admin/assets/vendors/feather/feather.css">
@@ -22,7 +22,7 @@ $auth->isLoggedIn();
   <!-- inject:css -->
   <link rel="stylesheet" href="admin/assets/css/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="admin/assets/images/favicon.png" />
+  <link rel="shortcut icon" href="admin/uploads/favicon.png" />
 </head>
 
 <body>
@@ -31,10 +31,10 @@ $auth->isLoggedIn();
       <div class="content-wrapper d-flex align-items-center auth px-0">
         <div class="row w-100 mx-0">
           <div class="col-lg-4 mx-auto">
-            <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+            <div class="auth-form-light text-center py-5 px-4 px-sm-5">
               <?php include('message.php'); ?>
               <div class="brand-logo">
-                <img src="admin/images/logo-dark.svg" alt="logo">
+                 <img src="admin/uploads/login-logo.png">
               </div>
               <h4>New here?</h4>
               <h6 class="font-weight-light">Signing up is easy. It only takes a few steps</h6>
@@ -64,7 +64,7 @@ $auth->isLoggedIn();
                   <button type="submit" name="register_btn" class="btn btn-block btn-info btn-lg font-weight-medium auth-form-btn">SIGN UP</button>
                 </div>
                 <div class="text-center mt-4 font-weight-light">
-                  Already have an account? <a href="login.html" class="text-primary">Login</a>
+                  Already have an account? <a href="login.php" class="text-primary">Login</a>
                 </div>
               </form>
 
