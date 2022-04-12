@@ -115,9 +115,8 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/handler/homeHandler.php');
                                 <div class="col-sm-9">
                                     <div class="form-group">
                                         <select data-bind="in:value" data-name="package" class="selectpicker form-control" data-live-search="true" data-width="100%" data-toggle="tooltip" title="select your package">
-                                            <option value="cost">Usual Delivery</option>
-                                            <option value="cost + 25">Fastest Delivery: + $25</option>
-                                            <option value="cost*0.9">Discount Delivery: -10%</option>
+                                            <option value="cost + 80">Regular Delivery</option>
+                                            <option value="cost + 120">Express Delivery</option>
                                         </select>
                                     </div>
                                 </div>
@@ -126,7 +125,7 @@ include_once($_SERVER["DOCUMENT_ROOT"] . '/handler/homeHandler.php');
                                 <div class="col-sm-9 col-xs-12 pull-right">
                                     <div class="btn-1 own-bgGradient"> <span> Total Cost: </span>
                                         <span data-bind="out:price, f:currency" data-name="cost" class="btn-1 dark">
-                                            <span class="pr-sign">-&nbsp;</span> $<span class="pr-wrap" style="display: none;"><span class="pr">0</span></span>
+                                            <span class="pr-sign">-&nbsp;</span> Tk <span class="pr-wrap" style="display: none;"><span class="pr">0</span></span>
                                         </span>
                                     </div>
                                 </div>
